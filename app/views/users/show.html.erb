@@ -1,0 +1,29 @@
+<h1>user</h1>
+
+<div class="nav justfy-content-end">
+  <%= link_to 'ユーザー一覧', users_path, class: 'nav-link'%>
+</div>
+
+<table class="table table-nover">
+  <tbody>
+    <tr>
+      <td><%= @user.id %></td>
+    </tr>
+    <tr>
+      <td><%= @user.name %></td>
+    </tr>
+    <tr>
+      <td><%= @user.admin? ? 'あり' : 'なし' %></td>
+    </tr>
+    <tr>
+      <td><%= @user.created_at %></td>
+    </tr>
+    <tr>
+      <td><%= @user.updated_at %></td>
+    </tr>
+
+  </tbody>
+</table>
+
+<%= link_to '掲示板一覧', users_path, class: 'btn btn-outline-dark' %>
+<%= link_to '削除', @user , class: 'btn btn-light', method: :delete %>
